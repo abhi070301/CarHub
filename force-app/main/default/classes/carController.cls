@@ -37,7 +37,7 @@ public with sharing class carController {
                 whereClause =  'WHERE ' + String.join(criteria, ' AND ');
             }
         }
-        String query = 'SELECT Id, Name, MSRP__c, Description__c, Category__c, Picture_URL__c FROM Car__c' + whereClause + ' WITH SECURITY_ENFORCED' + ' ORDER BY Name';
+        String query = 'SELECT Id, Name, MSRP__c, Description__c, Category__c, Picture_URL__c FROM Car__c ' + whereClause + ' WITH SECURITY_ENFORCED ORDER BY Name';
         return Database.query(query);
     }
 }
